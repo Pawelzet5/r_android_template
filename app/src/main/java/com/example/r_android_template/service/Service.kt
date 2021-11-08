@@ -1,7 +1,14 @@
 package com.example.r_android_template.service
 
+import android.util.Log
+import org.json.JSONArray
+import org.json.JSONTokener
+
 object Service {
 
+    public fun getString(): String {
+        return estateJsonString;
+    }
     private const val estateJsonString = """
         [
             {

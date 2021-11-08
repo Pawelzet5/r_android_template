@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="estate"
+            type="com.example.r_android_template.service.Estate" />
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/estateNumberTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{@string/estate_number(estate.estateNo)}"
+        app:layout_constraintStart_toEndOf="@+id/mapIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="5sp"
+        android:textStyle="bold"
+        android:layout_marginTop="2sp"
+        />
+    <TextView
+        android:id="@+id/landTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{@string/land(estate.land)}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="10sp"
+        android:layout_marginTop="2sp"/>
+
+    <TextView
+        android:id="@+id/areaTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5sp"
+        android:text="@{@string/area(estate.area)}"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/mapIcon"
+        app:layout_constraintTop_toBottomOf="@+id/mapIcon" />
+
+    <TextView
+        android:id="@+id/districtTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{@string/district(estate.district)}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapIcon"
+        android:layout_marginEnd="10sp"/>
+
+    <ImageView
+        android:id="@+id/mapIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/estateNumberTxt"
+        app:srcCompat="@drawable/ic_map"
+        android:layout_marginStart="2sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

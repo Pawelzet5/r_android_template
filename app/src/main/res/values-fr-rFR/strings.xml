@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">r_android_template</string>
+    <string name="estate_number">Numéro de succession: %s</string>
+    <string name="area">Area: %s ha</string>
+    <string name="land">Land: %s</string>
+    <string name="district">Région: %s</string>
+    <string name="show_estate_number">Afficher numéro de succession</string>
+</resources>
